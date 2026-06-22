@@ -1,0 +1,121 @@
+/* 🛠️ Reset & Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #eaeaea; /* สีพื้นหลังหน้าเว็บโทนสว่างตามภาพดีไซน์ของคุณ */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* 🏠 ตัวกล่องการ์ดหลัก */
+  .property-card {
+    background-color: #ffffff;
+    max-width: 340px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden; /* ป้องกันไม่ให้รูปภาพและขอบด้านล่างล้นทะลุความโค้งมนของการ์ด */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-bottom: 5px solid #f27495; /* แถบเส้นสีชมพูหนาที่ฐานการ์ดตามสไตล์ต้นฉบับ */
+  }
+  
+  /* 📸 ส่วนเฟรมรูปภาพ */
+  .card-image-wrapper {
+    position: relative; /* เปิดตำแหน่ง relative เพื่อให้ป้ายสีชมพูวิ่งมาเกาะขอบได้ */
+    height: 200px;
+    width: 100%;
+  }
+  
+  .room-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* จัดสัดส่วนรูปภาพไม่ให้บิดเบี้ยว */
+  }
+  
+  /* 🏷️ เทคนิค Positioned Layout สำหรับป้ายแท็ก "For Rental" */
+  .rental-badge {
+    position: absolute;
+    top: 14px;
+    right: 0; /* แนบชิดขอบขวาของรูปภาพ */
+    background-color: #f27495; /* สีชมพูพาสเทลสวยสดตามดีไซน์ */
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-top-left-radius: 4px;    /* ลบมุมเฉพาะฝั่งซ้ายให้ดูซอฟต์นวล */
+    border-bottom-left-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 📝 ส่วนกล่องข้อมูล */
+  .card-info {
+    padding: 24px;
+  }
+  
+  /* แถวราคาและ Apartment */
+  .price-type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .icon-dollar {
+    color: #8c8c8c; /* สีไอคอนดอลลาร์โทนเทาจาง */
+    font-size: 20px;
+  }
+  
+  .property-type {
+    color: #8c8c8c;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  /* ข้อความที่อยู่ */
+  .address {
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  /* 🛏️ แถวไอคอนสิ่งอำนวยความสะดวกด้านล่างสุด */
+  .amenities-row {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* เว้นช่องไฟระว่างไอคอนแต่ละตัว */
+    color: #737373;
+    font-size: 13px;
+  }
+  
+  .amenity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .amenity i {
+    color: #595959; /* เน้นสีตัวไอคอนให้เข้มขึ้นเล็กน้อยให้ดูโมเดิร์น */
+    font-size: 14px;
+  }
