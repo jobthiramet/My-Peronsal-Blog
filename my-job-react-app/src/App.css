@@ -1,0 +1,269 @@
+/* ==========================================
+   0. RESET VITE ROOT (ล้างค่าล็อกหน้าจอของ Vite)
+   ========================================== */
+   #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  
+  /* ==========================================
+     1. GLOBAL RESETS
+     ========================================== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #2d3748;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* กล่องครอบใหญ่ขยายเต็มตา */
+  .app-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  /* ==========================================
+     2. NAVBAR (แถบเมนูขวาสุด)
+     ========================================== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a202c;
+  }
+  
+  .logo .dot {
+    color: #02b894;
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .nav-actions button {
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-login {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .btn-signup {
+    background: #232323;
+    border: none;
+    color: #ffffff;
+  }
+  
+  /* ==========================================
+     3. HERO SECTION (ส่วนหัวเว็บ)
+     ========================================== */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+  }
+  
+  .hero-left {
+    flex: 1;
+  }
+  
+  .hero-left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 20px;
+  }
+  
+  .hero-left p {
+    font-size: 15px;
+    color: #718096;
+    max-width: 320px;
+    line-height: 1.6;
+  }
+  
+  .hero-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-middle img {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+  
+  .hero-right {
+    flex: 1;
+  }
+  
+  .author-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #a0aec0;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .hero-right h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 16px;
+  }
+  
+  .hero-right p {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  
+  /* ==========================================
+     4. ARTICLES GRID (ส่วนการ์ดภาพยนตร์)
+     ========================================== */
+  .articles-section {
+    padding: 40px 0 100px 0;
+  }
+  
+  .articles-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ededed;
+    padding: 8px 12px;
+    border-radius: 40px;
+    margin-bottom: 48px;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .tab {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #718096;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #dbdbdb;
+    color: #1a202c;
+    font-weight: 600;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 56px;
+  }
+  
+  .article-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  
+  .card-tag {
+    align-self: flex-start;
+    background-color: #e6fffa;
+    color: #02b894;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .card-desc {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #718096;
+  }
+  
+  .author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
