@@ -1,4 +1,5 @@
 import React from 'react';
+import obsessionPoster from '../assets/posters/obsession.jpg';
 
 export default function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export default function HeroSection() {
         <p>Discover deep dives into cinema, hidden gems, and honest takes on your favorite films. Your daily dose of movie analysis.</p>
       </div>
       <div className="hero-middle">
-        <img src="/posters/obsession.jpg" alt="Obsession movie poster" />
+        <img src={obsessionPoster} alt="Obsession movie poster" />
       </div>
       <div className="hero-right">
         <span className="author-label">-Featured Film</span>
